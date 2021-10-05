@@ -80,8 +80,8 @@ class MainActivity : AppCompatActivity() {
                     builder.setTitle(R.string.main_invalid_credentials)
                     builder.apply {
                         setNeutralButton(
-                            R.string.main_credentails_dialog_btn,
-                            DialogInterface.OnClickListener { _, _ -> })
+                            R.string.main_credentails_dialog_btn
+                        ) { _, _ -> }
                     }
                     builder.create()
                 }

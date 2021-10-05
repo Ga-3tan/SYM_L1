@@ -24,11 +24,6 @@ class NewLoginActivity : AppCompatActivity() {
         validateButton = findViewById(R.id.login_validate)
 
         cancelButton.setOnClickListener {
-            // besoin ?
-//            email.text?.clear()
-//            password.text?.clear()
-//            email.error = null
-//            password.error = null
             setResult(Activity.RESULT_CANCELED)
             finish()
         }
