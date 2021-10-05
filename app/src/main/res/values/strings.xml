@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">SYM - Labo 1</string>
+    <string name="app_name">SYM - Lab 1</string>
     <string name="main_email_hint">Your e-mail address</string>
     <string name="main_password_hint">Your password</string>
     <string name="main_mandatory_field">Required field cannot be left blank</string>
@@ -8,5 +8,11 @@
     <string name="main_cancel_btn">Cancel</string>
     <string name="main_create_account">New account</string>
     <string name="main_icon_desc">Application\'s logo</string>
+    <string name="main_email_invalid">Invalid e-mail</string>
+    <string name="main_invalid_credentials">Invalid credentials</string>
+    <string name="main_credentails_dialog_btn" translatable="false">OK</string>
+    <string name="profile_photo" translatable="false">Profile\'s photo</string>
+    <string name="profile_email" translatable="false">E-mail : %1$s</string>
+    <string name="login_create">Create an account</string>
 
 </resources>
