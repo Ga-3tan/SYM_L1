@@ -1,7 +1,6 @@
 package ch.heigvd.iict.sym.labo1
 
 import android.app.Activity
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.widget.*
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var password: EditText
     private lateinit var cancelButton: Button
     private lateinit var validateButton: Button
-    private lateinit var newAccount: TextView
+    private lateinit var newAccountLink: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // l'appel à la méthode onCreate de la super classe est obligatoire
@@ -42,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         password = findViewById(R.id.main_password)
         cancelButton = findViewById(R.id.main_cancel)
         validateButton = findViewById(R.id.main_validate)
-        newAccount = findViewById(R.id.main_new_account)
+        newAccountLink = findViewById(R.id.main_new_account)
         // Kotlin, au travers des Android Kotlin Extensions permet d'automatiser encore plus cette
         // étape en créant automatiquement les variables pour tous les éléments graphiques présents
         // dans le layout et disposant d'un id
@@ -73,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // check email-password couple
+            // vérification du couple email-password
             if (!credentials.contains(Pair(emailInput, passwordInput))) {
                 val alertDialog: AlertDialog = this.let {
                     val builder = AlertDialog.Builder(it)
@@ -89,21 +88,19 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             } else {
                 // lancement de la nouvelle activité
-                val intent = Intent(this, ProfileActivity::class.java).apply {
-                    putExtra(EXTRA_MSG, emailInput)
-                }
-                // .apply fait la même chose que la ligne suivante :
-                // intent.putExtra(EXTRA_MSG, emailInput)
+                val intent = Intent(this, ProfileActivity::class.java)
+                intent.putExtra(EXTRA_MSG, emailInput)
                 startActivity(intent)
             }
         }
 
-        newAccount.setOnClickListener {
+        newAccountLink.setOnClickListener {
             getContent.launch(Intent(this, NewLoginActivity::class.java))
         }
     }
 
-    // récupère et ajoute les credentials d'inscription
+    // configure le launcher de la nouvelle activité pour récupérer et ajouter les identifiants
+    // d'inscription (via la fonction de callback)
     private val getContent =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
