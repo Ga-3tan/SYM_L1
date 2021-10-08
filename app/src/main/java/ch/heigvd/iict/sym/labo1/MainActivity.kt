@@ -6,10 +6,9 @@ import android.os.Bundle
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import ch.heigvd.iict.sym.labo1.NewLoginActivity.Companion.RESULT_MSG
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : LifeCycleAppCompatActivity() {
 
     // on définit une liste de couples e-mail / mot de passe
     // ceci est fait juste pour simplifier ce premier laboratoire,
