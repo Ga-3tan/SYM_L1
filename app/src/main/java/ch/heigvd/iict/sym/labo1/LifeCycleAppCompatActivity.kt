@@ -6,42 +6,46 @@ import androidx.appcompat.app.AppCompatActivity
 
 open class LifeCycleAppCompatActivity : AppCompatActivity() {
 
+    private fun logLifeCycleFunction(function: String) {
+        Log.i(TAG_LIFECYCLE, "$localClassName: Entered the $function method")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.i(TAG_LIFECYCLE,  getLocalClassName() + ": Entered the onCreate() method")
+        logLifeCycleFunction("onCreate()")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.i(TAG_LIFECYCLE, getLocalClassName() + ": Entered the onStart() method")
+        logLifeCycleFunction("onStart()")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.i(TAG_LIFECYCLE, getLocalClassName() + ": Entered the onResume() method")
+        logLifeCycleFunction("onResume()")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.i(TAG_LIFECYCLE, getLocalClassName() + ": Entered the onPause() method")
+        logLifeCycleFunction("onPause()")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.i(TAG_LIFECYCLE, getLocalClassName() + ": Entered the onStop() method")
+        logLifeCycleFunction("onStop()")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.i(TAG_LIFECYCLE, getLocalClassName() + ": Entered the onRestart() method")
+        logLifeCycleFunction("onRestart()")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.i(TAG_LIFECYCLE, getLocalClassName() + ": Entered the onDestroy() method")
+        logLifeCycleFunction("onDestroy()")
     }
 
     companion object {
-        const val TAG_LIFECYCLE = "LogLifeCycle"
+        private const val TAG_LIFECYCLE = "LogLifeCycle"
     }
 }

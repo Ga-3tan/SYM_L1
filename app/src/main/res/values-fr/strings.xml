@@ -9,7 +9,7 @@
     <string name="main_create_account">Nouveau compte</string>
     <string name="main_icon_desc">Logo application</string>
     <string name="main_email_invalid">E-mail invalide</string>
-    <string name="main_invalid_credentials">Identification non valides</string>
+    <string name="main_invalid_credentials">Identification non valide</string>
     <string name="login_create">Créer un compte</string>
 
 </resources>
