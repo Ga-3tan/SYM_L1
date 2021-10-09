@@ -23,6 +23,7 @@ class NewLoginActivity : LifeCycleAppCompatActivity() {
         validateButton = findViewById(R.id.login_validate)
 
         cancelButton.setOnClickListener {
+            // retourne à l'activité parent
             setResult(Activity.RESULT_CANCELED)
             finish()
         }
@@ -36,7 +37,7 @@ class NewLoginActivity : LifeCycleAppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // transmet la paire e-mail/mdp
+            // transmet la paire e-mail/mdp et retourne à l'activité parent
             setResult(Activity.RESULT_OK, Intent().apply {
                 putExtra(RESULT_MSG, Pair(email.text.toString(), password.text.toString()))
             })

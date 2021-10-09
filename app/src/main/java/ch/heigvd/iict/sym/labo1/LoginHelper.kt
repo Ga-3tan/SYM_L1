@@ -25,9 +25,10 @@ fun isFieldEmpty(fieldInput: EditText, context: Context): Boolean {
 }
 
 fun isEmailValid(email: String?, context: Context): Boolean {
-    return if (Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+    return if (Patterns.EMAIL_ADDRESS.matcher(email as CharSequence).matches()) {
         true
     } else {
+        // afficher un message temporaire pour indiquer l'erreur
         Toast.makeText(
             context.applicationContext,
             context.getString(R.string.main_email_invalid),

@@ -71,7 +71,7 @@ class MainActivity : LifeCycleAppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // vérification du couple email-password
+            // vérification du couple email-password, avec boîte de dialogue si erreur
             if (!credentials.contains(Pair(emailInput, passwordInput))) {
                 val alertDialog: AlertDialog = this.let {
                     val builder = AlertDialog.Builder(it)
@@ -105,6 +105,7 @@ class MainActivity : LifeCycleAppCompatActivity() {
             if (result.resultCode == Activity.RESULT_OK) {
                 val extra = result.data!!.extras
                 val newCred = extra?.get(RESULT_MSG) as Pair<String, String>
+                // "cast safe", car le contrat lie les deux activités et on sait qu'on a transmis une paire
                 credentials.add(newCred)
             }
         }
