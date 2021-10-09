@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
-import ch.heigvd.iict.sym.labo1.NewLoginActivity.Companion.RESULT_MSG
+import ch.heigvd.iict.sym.labo1.RegisterActivity.Companion.RESULT_MSG
 
 class MainActivity : LifeCycleAppCompatActivity() {
 
@@ -94,7 +94,7 @@ class MainActivity : LifeCycleAppCompatActivity() {
         }
 
         newAccountLink.setOnClickListener {
-            getContent.launch(Intent(this, NewLoginActivity::class.java))
+            getContent.launch(Intent(this, RegisterActivity::class.java))
         }
     }
 

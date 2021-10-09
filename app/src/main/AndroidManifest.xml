@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/SymTheme">
         <activity
-            android:name=".NewLoginActivity"
+            android:name=".RegisterActivity"
             android:exported="true" />
         <activity
             android:name=".ProfileActivity"

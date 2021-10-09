@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 
-class NewLoginActivity : LifeCycleAppCompatActivity() {
+class RegisterActivity : LifeCycleAppCompatActivity() {
 
     private lateinit var email: EditText
     private lateinit var password: EditText
