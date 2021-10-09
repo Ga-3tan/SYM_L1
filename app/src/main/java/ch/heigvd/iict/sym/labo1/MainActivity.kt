@@ -8,6 +8,12 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import ch.heigvd.iict.sym.labo1.RegisterActivity.Companion.RESULT_MSG
 
+/**
+ * Activitée principale gérant le login de l'application
+ * @author Alessandro Parrino, Daniel Sciarra, Gaétan Zwick
+ * @sdk 29
+ * @date 10.10.21
+ */
 class MainActivity : LifeCycleAppCompatActivity() {
 
     // on définit une liste de couples e-mail / mot de passe

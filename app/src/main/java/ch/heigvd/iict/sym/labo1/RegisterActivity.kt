@@ -6,6 +6,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 
+/**
+ * Activitée pour la création d'un nouvel utilisateur
+ * @author Alessandro Parrino, Daniel Sciarra, Gaétan Zwick
+ * @sdk 29
+ * @date 10.10.21
+ */
 class RegisterActivity : LifeCycleAppCompatActivity() {
 
     private lateinit var email: EditText

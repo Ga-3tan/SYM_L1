@@ -4,10 +4,16 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
-open class LifeCycleAppCompatActivity : AppCompatActivity() {
+/**
+ * Activitée  gérant les logs du cycle de vie de l'application
+ * @author Alessandro Parrino, Daniel Sciarra, Gaétan Zwick
+ * @sdk 29
+ * @date 10.10.21
+ */
+abstract class LifeCycleAppCompatActivity : AppCompatActivity() {
 
-    private fun logLifeCycleFunction(function: String) {
-        Log.i(TAG_LIFECYCLE, "$localClassName: Entered the $function method")
+    private fun logLifeCycleFunction(funcName: String) {
+        Log.i(TAG_LIFECYCLE, "$localClassName: Entered the $funcName method")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

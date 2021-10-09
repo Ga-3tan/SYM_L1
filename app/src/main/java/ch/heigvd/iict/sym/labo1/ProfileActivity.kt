@@ -6,6 +6,12 @@ import android.widget.TextView
 import ch.heigvd.iict.sym.labo1.MainActivity.Companion.EXTRA_MSG
 import ch.heigvd.iict.sym.labo1.network.ImageDownloader
 
+/**
+ * Activitée représentant le profile de l'utilisateur loggé
+ * @author Alessandro Parrino, Daniel Sciarra, Gaétan Zwick
+ * @sdk 29
+ * @date 10.10.21
+ */
 class ProfileActivity : LifeCycleAppCompatActivity() {
 
     private lateinit var email: TextView
